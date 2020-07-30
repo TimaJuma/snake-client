@@ -29,12 +29,12 @@ const handleUserInput = function(key) {
     connection.write("Move: down");
   }  if (key === 'd') {
     connection.write("Move: right");
-  }  if (key === 'f') {
-    connection.write('Say: YAS');
-  }  if (key === 'e') {
-    connection.write('Say: WOO');
-  }  if (key === 'q') {
-    connection.write('Say: EYY')
+  }  if (key === 'y') {
+    connection.write('Say: YES');
+  }  if (key === 'n') {
+    connection.write('Say: NO');
+  }  if (key === 'm') {
+    connection.write('Say: MAY')
   }  if (key === '\u0003') {
     process.exit();
   }

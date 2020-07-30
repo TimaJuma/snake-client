@@ -9,5 +9,3 @@ console.log('connecting from play.js...');
 const conn = connect();
 
 setupInput(conn);
-
-// conn.write("Name: AAA");
