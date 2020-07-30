@@ -6,6 +6,8 @@ const {setupInput} = require('./input');
 
 
 console.log('connecting from play.js...');
-connect();
+const conn = connect();
 
-setupInput();
+setupInput(conn);
+
+// conn.write("Name: AAA");

@@ -45,8 +45,8 @@ const connect = ()=> {
   return conn;
 }
 
-console.log('Connecting to server...');
-// connect();
+// console.log('Connecting to server...');
+// // connect();
 
 
 module.exports = {connect}
