@@ -1,9 +1,10 @@
 const net = require('net');
 
+
 // EStablish connection
 const connect = ()=> {
   const conn = net.createConnection({
-    host: '135.23.222.131',
+    host: '127.0.0.1',
     port: 50541
   });
   
@@ -11,8 +12,36 @@ const connect = ()=> {
   conn.setEncoding('utf8');
   
   conn.on('connect', ()=>{
-    console.log('connection established');
-  })
+    console.log('message from console log for connection')
+    conn.write("Name: TJM");
+
+    // setInterval(()=> {
+    //   conn.write("Move: up");
+    // }, 1000);
+    // setInterval(()=> {
+    //   conn.write("Move: left");
+    // }, 2000);
+    // setInterval(()=> {
+    //   conn.write("Move: left");
+    // }, 3000);
+    // setInterval(()=> {
+    //   conn.write("Move: down");
+    // }, 4000);
+    // setInterval(()=> {
+    //   conn.write("Move: down");
+    // }, 5000);
+    // setInterval(()=> {
+    //   conn.write("Move: right");
+    // }, 6000);
+    
+  });
+
+  conn.on('data', (data)=> {
+    console.log('Data from server:', data)
+  });
+
+
+  
   return conn;
 }
 
